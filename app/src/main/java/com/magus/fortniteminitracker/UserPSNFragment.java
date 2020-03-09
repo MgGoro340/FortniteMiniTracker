@@ -7,10 +7,20 @@ import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.Toast;
+
+import com.magus.fortniteminitracker.Retrofit.MiniTrackerClient;
+import com.magus.fortniteminitracker.Retrofit.MiniTrackerService;
+import com.magus.fortniteminitracker.model.ResponseFindUser;
+
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 
 /**
@@ -23,6 +33,8 @@ public class UserPSNFragment extends Fragment {
 
     private OnFragmentInteractionListener mListener;
     private Button btnVerEstadisticas;
+    MiniTrackerService miniTrackerService;
+    MiniTrackerClient miniTrackerClient;
 
     private  View nView ;
 
@@ -34,6 +46,11 @@ public class UserPSNFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+        miniTrackerClient = MiniTrackerClient.getInstance();
+        miniTrackerService = MiniTrackerClient.getInstanceMiniTrackerService();
+
+
+
         // Inflate the layout for this fragment
         nView = inflater.inflate(R.layout.fragment_user_psn, container, false);
          btnVerEstadisticas = (Button) nView.findViewById(R.id.buttonVerUsuario);
@@ -41,9 +58,36 @@ public class UserPSNFragment extends Fragment {
              @Override
              public void onClick(View v) {
 
-                 Intent itEstadisticas = new Intent(getActivity(), EstadisticasUsuarioActivity.class);
-                 //downloadIntent.setData(Uri.parse(fileUrl));
-                 startActivity(itEstadisticas);
+                 // aca llamo al servicio y busco la info
+
+
+                 Call<ResponseFindUser> call = miniTrackerService.doConsultaUsuario();
+                 call.enqueue(new Callback<ResponseFindUser>() {
+                     @Override
+                     public void onResponse(Call<ResponseFindUser> call, Response<ResponseFindUser> response) {
+                        // por aca todo bien
+                         if (response.isSuccessful()) {
+                             //todo way
+                             // llamo a la siguiente ventana
+                             Intent itEstadisticas = new Intent(getActivity(), EstadisticasUsuarioActivity.class);
+
+                             startActivity(itEstadisticas);
+
+                             //destruimos el activity
+
+                         }
+                     }
+
+                     @Override
+                     public void onFailure(Call<ResponseFindUser> call, Throwable t) {
+                         Log.i("CALL","un pequeño error ");
+                         Toast.makeText(
+                                 nView.getContext(),"hubo un errror al consutlar", Toast.LENGTH_LONG
+                         );
+                     }
+                 });
+
+
              }
          });
          return nView;
