@@ -56,7 +56,7 @@ public class UserPSNFragment extends Fragment {
          btnVerEstadisticas = (Button) nView.findViewById(R.id.buttonVerUsuario);
          btnVerEstadisticas.setOnClickListener(new View.OnClickListener() {
              @Override
-             public void onClick(View v) {
+             public void onClick(final View v) {
 
                  // aca llamo al servicio y busco la info
 
@@ -67,12 +67,26 @@ public class UserPSNFragment extends Fragment {
                      public void onResponse(Call<ResponseFindUser> call, Response<ResponseFindUser> response) {
                         // por aca todo bien
                          if (response.isSuccessful()) {
+
+
                              //todo way
                              // llamo a la siguiente ventana
-                             Intent itEstadisticas = new Intent(getActivity(), EstadisticasUsuarioActivity.class);
+                             if ( response.body().getAccountId() != null ) {
+                                 Intent itEstadisticas = new Intent(getActivity(), EstadisticasUsuarioActivity.class);
 
-                             startActivity(itEstadisticas);
+                                 itEstadisticas.putExtra("account", response.body().getAccountId());
+                                 itEstadisticas.putExtra("epicUser", response.body().getEpicUserHandle());
+                                 itEstadisticas.putExtra("wins", response.body().getStats().getP2().getTop1().getValue());
+                                 itEstadisticas.putExtra("kills", response.body().getStats().getP2().getKills().getValue());
+                                 itEstadisticas.putExtra("winRatio", response.body().getStats().getP2().getWinRatio().getValue());
+                                 itEstadisticas.putExtra("matchs", response.body().getStats().getP2().getMatches().getValue());
+                                 itEstadisticas.putExtra("killsPorGame", response.body().getStats().getP2().getKpg().getValue());
+                                 itEstadisticas.putExtra("top10", response.body().getStats().getP2().getTop10().getValue());
+                                 itEstadisticas.putExtra("top25", response.body().getStats().getP2().getTop25().getValue());
 
+
+                                 startActivity(itEstadisticas);
+                             }
                              //destruimos el activity
 
                          }
@@ -80,10 +94,9 @@ public class UserPSNFragment extends Fragment {
 
                      @Override
                      public void onFailure(Call<ResponseFindUser> call, Throwable t) {
-                         Log.i("CALL","un pequeño error ");
-                         Toast.makeText(
-                                 nView.getContext(),"hubo un errror al consutlar", Toast.LENGTH_LONG
-                         );
+                         Log.i("CALL","un pequeño error " + t.fillInStackTrace());
+                         Toast.makeText(getContext(), "hubo un errror al consutlar", Toast.LENGTH_LONG);
+
                      }
                  });
 
