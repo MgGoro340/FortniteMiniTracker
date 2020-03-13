@@ -12,16 +12,13 @@
         android:layout_height="19dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/imageView"
-        app:srcCompat="@drawable/c250307eea5e5b88979c5945ca8f07e9"
-        tools:layout_editor_absoluteY="39dp" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/c250307eea5e5b88979c5945ca8f07e9" />
 
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="100dp"
         android:layout_height="100dp"
-        android:layout_marginTop="16dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.051"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/fortniteicontwo" />
@@ -30,85 +27,50 @@
         android:id="@+id/textView"
         android:layout_width="117dp"
         android:layout_height="58dp"
-        android:layout_marginStart="40dp"
         android:text="Wins"
         android:textColor="#9C27B0"
         android:textSize="36sp"
         android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="153dp" />
-
-    <TextView
-        android:id="@+id/textView17"
-        android:layout_width="66dp"
-        android:layout_height="30dp"
-        android:layout_marginStart="124dp"
-        android:text="Usuario"
-        android:textColor="#9C27B0"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <TextView
-        android:id="@+id/textViewEpicUser"
-        android:layout_width="185dp"
-        android:layout_height="31dp"
-        android:layout_marginStart="12dp"
-        android:textColor="#9C27B0"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@+id/textView17"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/textView17" />
-
-    <TextView
-        android:id="@+id/textViewAccount"
-        android:layout_width="349dp"
-        android:layout_height="19dp"
-        android:layout_marginEnd="12dp"
-        android:textColor="#48434B"
-        android:textSize="12sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textViewEpicUser"
-        tools:text="fffff" />
+        app:layout_constraintTop_toBottomOf="@+id/textViewAccount" />
 
     <TextView
         android:id="@+id/textView5"
         android:layout_width="117dp"
         android:layout_height="30dp"
-        android:layout_marginStart="40dp"
-        android:layout_marginTop="20dp"
         android:text="kills"
         android:textColor="#9C27B0"
         android:textSize="18sp"
         android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/textView10"
         app:layout_constraintTop_toBottomOf="@+id/textView10" />
 
     <TextView
         android:id="@+id/textView7"
         android:layout_width="117dp"
         android:layout_height="30dp"
-        android:layout_marginStart="40dp"
-        android:text="matchs"
+        android:layout_marginTop="12dp"
+        android:text="Total Matchs"
         android:textColor="#9C27B0"
         android:textSize="18sp"
         android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="395dp" />
+        app:layout_constraintStart_toStartOf="@+id/textView6"
+        app:layout_constraintTop_toBottomOf="@+id/textView6" />
 
     <TextView
         android:id="@+id/textViewWinRatio"
         android:layout_width="57dp"
         android:layout_height="31dp"
-        android:text="kills"
+        android:text="winRatio"
         android:textColor="#9C27B0"
         android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/textView6"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/textView6" />
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/textView6"
+        app:layout_constraintTop_toBottomOf="@+id/textView5" />
 
     <TextView
         android:id="@+id/textViewKillPorGame"
@@ -120,46 +82,46 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/textView8"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/textView8" />
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/textView8"
+        app:layout_constraintTop_toTopOf="@+id/textView8" />
 
     <TextView
         android:id="@+id/textView8"
         android:layout_width="117dp"
         android:layout_height="30dp"
-        android:layout_marginStart="40dp"
-        android:text="killsPorGame"
+        android:layout_marginTop="12dp"
+        android:text="Kills/Game"
         android:textColor="#9C27B0"
         android:textSize="18sp"
         android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/textView7"
         app:layout_constraintTop_toBottomOf="@+id/textView7" />
 
     <TextView
         android:id="@+id/textViewMatchs"
         android:layout_width="57dp"
         android:layout_height="31dp"
-        android:layout_marginStart="8dp"
-        android:text="kills"
+        android:text="matchs"
         android:textColor="#9C27B0"
         android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/textView7"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/textView7"
-        app:layout_constraintTop_toTopOf="@+id/textView7"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toTopOf="@+id/textView7" />
 
     <TextView
         android:id="@+id/textView6"
         android:layout_width="117dp"
         android:layout_height="30dp"
-        android:layout_marginTop="16dp"
-        android:text="winRatio"
+        android:text="win Ratio"
         android:textColor="#9C27B0"
         android:textSize="18sp"
         android:textStyle="bold"
-        app:layout_constraintTop_toBottomOf="@+id/textView5"
-        tools:layout_editor_absoluteX="40dp" />
+        app:layout_constraintStart_toStartOf="@+id/textView5"
+        app:layout_constraintTop_toBottomOf="@+id/textView5" />
 
     <TextView
         android:id="@+id/textViewKills"
@@ -169,10 +131,10 @@
         android:textColor="#9C27B0"
         android:textSize="18sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@+id/textView5"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/textView5"
-        app:layout_constraintTop_toTopOf="@+id/textView5" />
+        app:layout_constraintTop_toBottomOf="@+id/textViewTop25" />
 
     <TextView
         android:id="@+id/textViewTop10"
@@ -182,9 +144,12 @@
         android:textColor="#9C27B0"
         android:textSize="18sp"
         android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/textView9"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/textView9"
-        tools:layout_editor_absoluteY="231dp" />
+        app:layout_constraintTop_toTopOf="@+id/textView9"
+        app:layout_constraintVertical_bias="0.0" />
 
     <TextView
         android:id="@+id/textViewTop25"
@@ -194,34 +159,33 @@
         android:textColor="#9C27B0"
         android:textSize="18sp"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/textView10"
-        tools:layout_editor_absoluteY="269dp" />
+        app:layout_constraintBottom_toBottomOf="@+id/textView10"
+        app:layout_constraintEnd_toEndOf="@+id/textViewTop10"
+        app:layout_constraintStart_toStartOf="@+id/textViewTop10"
+        app:layout_constraintTop_toTopOf="@+id/textView10" />
 
     <TextView
         android:id="@+id/textView9"
         android:layout_width="117dp"
         android:layout_height="30dp"
-        android:layout_marginStart="40dp"
-        android:layout_marginTop="20dp"
-        android:text="top10"
+        android:text="Top 10"
         android:textColor="#9C27B0"
         android:textSize="18sp"
         android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/textView"
+        app:layout_constraintStart_toStartOf="@+id/textView"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
     <TextView
         android:id="@+id/textView10"
         android:layout_width="117dp"
         android:layout_height="30dp"
-        android:layout_marginStart="44dp"
-        android:layout_marginTop="8dp"
-        android:text="top25"
+        android:text="Top 25"
         android:textColor="#9C27B0"
         android:textSize="18sp"
         android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/textView9"
+        app:layout_constraintStart_toStartOf="@+id/textView9"
         app:layout_constraintTop_toBottomOf="@+id/textView9" />
 
     <TextView
@@ -232,7 +196,32 @@
         android:textColor="#9C27B0"
         android:textSize="36sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/textView"
-        tools:layout_editor_absoluteY="153dp" />
+        app:layout_constraintTop_toTopOf="@+id/textView" />
+
+    <TextView
+        android:id="@+id/textViewEpicUser"
+        android:layout_width="185dp"
+        android:layout_height="31dp"
+        android:layout_marginTop="20dp"
+        android:text="EpicUser"
+        android:textColor="#9C27B0"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/imageView"
+        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+
+    <TextView
+        android:id="@+id/textViewAccount"
+        android:layout_width="282dp"
+        android:layout_height="23dp"
+        android:textColor="#48434B"
+        android:textSize="12sp"
+        app:layout_constraintStart_toEndOf="@+id/imageView"
+        app:layout_constraintTop_toBottomOf="@+id/textViewEpicUser"
+        tools:text="fffff" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

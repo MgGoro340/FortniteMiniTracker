@@ -17,24 +17,54 @@
             android:id="@+id/editTextUsuarioPsn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="40dp"
+            android:layout_marginTop="20dp"
             android:ems="10"
             android:hint="@string/usuarioPSN"
             android:inputType="textPersonName"
-            UserPSNFragment:layout_constraintEnd_toEndOf="parent"
-            UserPSNFragment:layout_constraintStart_toStartOf="parent"
-            UserPSNFragment:layout_constraintTop_toTopOf="parent" />
+            UserPSNFragment:layout_constraintEnd_toEndOf="@+id/radioGroup"
+            UserPSNFragment:layout_constraintHorizontal_bias="0.453"
+            UserPSNFragment:layout_constraintStart_toStartOf="@+id/radioGroup"
+            UserPSNFragment:layout_constraintTop_toBottomOf="@+id/radioGroup" />
 
         <Button
             android:id="@+id/buttonVerUsuario"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="24dp"
+            android:layout_marginTop="36dp"
             android:text="@string/verEstsadisticas"
             UserPSNFragment:layout_constraintEnd_toEndOf="@+id/editTextUsuarioPsn"
-            UserPSNFragment:layout_constraintHorizontal_bias="0.0"
+            UserPSNFragment:layout_constraintHorizontal_bias="1.0"
             UserPSNFragment:layout_constraintStart_toStartOf="@+id/editTextUsuarioPsn"
             UserPSNFragment:layout_constraintTop_toBottomOf="@+id/editTextUsuarioPsn" />
+
+        <RadioGroup
+            android:id="@+id/radioGroup"
+            android:layout_width="149dp"
+            android:layout_height="107dp"
+            android:layout_marginTop="28dp"
+            android:checkedButton="@id/radioButtonPSN"
+            UserPSNFragment:layout_constraintEnd_toEndOf="parent"
+            UserPSNFragment:layout_constraintStart_toStartOf="parent"
+            UserPSNFragment:layout_constraintTop_toTopOf="parent">
+
+            <RadioButton
+                android:id="@+id/radioButtonPSN"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="PSN" />
+
+            <RadioButton
+                android:id="@+id/radioButtonXbox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Xbox" />
+
+            <RadioButton
+                android:id="@+id/radioButtonPC"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="PC" />
+        </RadioGroup>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </FrameLayout>
