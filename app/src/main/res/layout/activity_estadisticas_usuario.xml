@@ -4,16 +4,17 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/secondaryLightColor"
     tools:context=".EstadisticasUsuarioActivity">
 
     <ImageView
         android:id="@+id/imageView2"
-        android:layout_width="273dp"
-        android:layout_height="19dp"
+        android:layout_width="279dp"
+        android:layout_height="36dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/imageView"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/c250307eea5e5b88979c5945ca8f07e9" />
+        app:srcCompat="@drawable/ab350b8c35dadc57d2a4e8335ddb670b" />
 
     <ImageView
         android:id="@+id/imageView"
@@ -24,193 +25,15 @@
         app:srcCompat="@drawable/fortniteicontwo" />
 
     <TextView
-        android:id="@+id/textView"
-        android:layout_width="117dp"
-        android:layout_height="58dp"
-        android:text="Wins"
-        android:textColor="#9C27B0"
-        android:textSize="36sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textViewAccount" />
-
-    <TextView
-        android:id="@+id/textView5"
-        android:layout_width="117dp"
-        android:layout_height="30dp"
-        android:text="kills"
-        android:textColor="#9C27B0"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="@+id/textView10"
-        app:layout_constraintTop_toBottomOf="@+id/textView10" />
-
-    <TextView
-        android:id="@+id/textView7"
-        android:layout_width="117dp"
-        android:layout_height="30dp"
-        android:layout_marginTop="12dp"
-        android:text="Total Matchs"
-        android:textColor="#9C27B0"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="@+id/textView6"
-        app:layout_constraintTop_toBottomOf="@+id/textView6" />
-
-    <TextView
-        android:id="@+id/textViewWinRatio"
-        android:layout_width="57dp"
-        android:layout_height="31dp"
-        android:text="winRatio"
-        android:textColor="#9C27B0"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@+id/textView6"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/textView6"
-        app:layout_constraintTop_toBottomOf="@+id/textView5" />
-
-    <TextView
-        android:id="@+id/textViewKillPorGame"
-        android:layout_width="57dp"
-        android:layout_height="31dp"
-        android:text="kills"
-        android:textColor="#9C27B0"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@+id/textView8"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/textView8"
-        app:layout_constraintTop_toTopOf="@+id/textView8" />
-
-    <TextView
-        android:id="@+id/textView8"
-        android:layout_width="117dp"
-        android:layout_height="30dp"
-        android:layout_marginTop="12dp"
-        android:text="Kills/Game"
-        android:textColor="#9C27B0"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="@+id/textView7"
-        app:layout_constraintTop_toBottomOf="@+id/textView7" />
-
-    <TextView
-        android:id="@+id/textViewMatchs"
-        android:layout_width="57dp"
-        android:layout_height="31dp"
-        android:text="matchs"
-        android:textColor="#9C27B0"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@+id/textView7"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/textView7"
-        app:layout_constraintTop_toTopOf="@+id/textView7" />
-
-    <TextView
-        android:id="@+id/textView6"
-        android:layout_width="117dp"
-        android:layout_height="30dp"
-        android:text="win Ratio"
-        android:textColor="#9C27B0"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="@+id/textView5"
-        app:layout_constraintTop_toBottomOf="@+id/textView5" />
-
-    <TextView
-        android:id="@+id/textViewKills"
-        android:layout_width="57dp"
-        android:layout_height="31dp"
-        android:text="kills"
-        android:textColor="#9C27B0"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/textView5"
-        app:layout_constraintTop_toBottomOf="@+id/textViewTop25" />
-
-    <TextView
-        android:id="@+id/textViewTop10"
-        android:layout_width="57dp"
-        android:layout_height="31dp"
-        android:text="kills"
-        android:textColor="#9C27B0"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@+id/textView9"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/textView9"
-        app:layout_constraintTop_toTopOf="@+id/textView9"
-        app:layout_constraintVertical_bias="0.0" />
-
-    <TextView
-        android:id="@+id/textViewTop25"
-        android:layout_width="57dp"
-        android:layout_height="31dp"
-        android:text="kills"
-        android:textColor="#9C27B0"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@+id/textView10"
-        app:layout_constraintEnd_toEndOf="@+id/textViewTop10"
-        app:layout_constraintStart_toStartOf="@+id/textViewTop10"
-        app:layout_constraintTop_toTopOf="@+id/textView10" />
-
-    <TextView
-        android:id="@+id/textView9"
-        android:layout_width="117dp"
-        android:layout_height="30dp"
-        android:text="Top 10"
-        android:textColor="#9C27B0"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="@+id/textView"
-        app:layout_constraintStart_toStartOf="@+id/textView"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
-
-    <TextView
-        android:id="@+id/textView10"
-        android:layout_width="117dp"
-        android:layout_height="30dp"
-        android:text="Top 25"
-        android:textColor="#9C27B0"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="@+id/textView9"
-        app:layout_constraintStart_toStartOf="@+id/textView9"
-        app:layout_constraintTop_toBottomOf="@+id/textView9" />
-
-    <TextView
-        android:id="@+id/textViewWins"
-        android:layout_width="96dp"
-        android:layout_height="57dp"
-        android:text="fff"
-        android:textColor="#9C27B0"
-        android:textSize="36sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/textView"
-        app:layout_constraintTop_toTopOf="@+id/textView" />
-
-    <TextView
         android:id="@+id/textViewEpicUser"
-        android:layout_width="185dp"
-        android:layout_height="31dp"
-        android:layout_marginTop="20dp"
+        android:layout_width="288dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="4dp"
         android:text="EpicUser"
-        android:textColor="#9C27B0"
+        android:textColor="@color/primaryTextColor"
         android:textSize="18sp"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/imageView"
         app:layout_constraintTop_toBottomOf="@+id/imageView2" />
 
@@ -218,10 +41,229 @@
         android:id="@+id/textViewAccount"
         android:layout_width="282dp"
         android:layout_height="23dp"
+        android:layout_marginStart="3dp"
         android:textColor="#48434B"
         android:textSize="12sp"
-        app:layout_constraintStart_toEndOf="@+id/imageView"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/textViewEpicUser"
         app:layout_constraintTop_toBottomOf="@+id/textViewEpicUser"
+        app:layout_constraintVertical_bias="0.521"
         tools:text="fffff" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="117dp"
+        android:layout_height="58dp"
+        android:text="Wins"
+        android:textAlignment="textEnd"
+        android:textColor="@color/primaryTextColor"
+        android:textSize="36sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/imageView"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+    <TextView
+        android:id="@+id/textViewWins"
+        android:layout_width="165dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="8dp"
+        android:text="ganados"
+        android:textColor="@color/primaryTextColor"
+        android:textSize="36sp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="@+id/textView"
+        app:layout_constraintStart_toEndOf="@+id/textView"
+        app:layout_constraintTop_toTopOf="@+id/textView" />
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="117dp"
+        android:layout_height="33dp"
+        android:layout_marginTop="16dp"
+        android:text="Top 10"
+        android:textAlignment="textEnd"
+        android:textColor="@color/primaryTextColor"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <TextView
+        android:id="@+id/textViewTop10"
+        android:layout_width="145dp"
+        android:layout_height="34dp"
+        android:layout_marginStart="8dp"
+        android:text="Top 10 valor"
+        android:textColor="@color/primaryTextColor"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/textView9"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/textView9"
+        app:layout_constraintTop_toTopOf="@+id/textView9"
+        app:layout_constraintVertical_bias="0.575" />
+
+    <TextView
+        android:id="@+id/textView10"
+        android:layout_width="116dp"
+        android:layout_height="28dp"
+        android:layout_marginTop="16dp"
+        android:text="Top 25"
+        android:textAlignment="textEnd"
+        android:textColor="@color/primaryTextColor"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="@+id/textView9"
+        app:layout_constraintHorizontal_bias="0.282"
+        app:layout_constraintStart_toStartOf="@+id/textView9"
+        app:layout_constraintTop_toBottomOf="@+id/textView9" />
+
+    <TextView
+        android:id="@+id/textViewTop25"
+        android:layout_width="147dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="8dp"
+        android:text="Top 25 Value"
+        android:textColor="@color/primaryTextColor"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/textView10"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/textView10"
+        app:layout_constraintTop_toTopOf="@+id/textView10" />
+
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="117dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="16dp"
+        android:text="Total Matchs"
+        android:textAlignment="textEnd"
+        android:textColor="@color/primaryTextColor"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:visibility="visible"
+        app:layout_constraintStart_toStartOf="@+id/textView10"
+        app:layout_constraintTop_toBottomOf="@+id/textView10" />
+
+    <TextView
+        android:id="@+id/textViewMatchs"
+        android:layout_width="57dp"
+        android:layout_height="31dp"
+        android:layout_marginStart="8dp"
+        android:text="matchs"
+        android:textColor="@color/primaryTextColor"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="@+id/textView7"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/textView7"
+        app:layout_constraintTop_toTopOf="@+id/textView7"
+        app:layout_constraintVertical_bias="0.51" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="117dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="16dp"
+        android:text="kills"
+        android:textAlignment="textEnd"
+        android:textColor="@color/primaryTextColor"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:visibility="visible"
+        app:layout_constraintStart_toStartOf="@+id/textView7"
+        app:layout_constraintTop_toBottomOf="@+id/textView7" />
+
+    <TextView
+        android:id="@+id/textViewKills"
+        android:layout_width="100dp"
+        android:layout_height="31dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:text="kills Value"
+        android:textColor="@color/primaryTextColor"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/textView5"
+        app:layout_constraintStart_toEndOf="@+id/textView5"
+        app:layout_constraintTop_toBottomOf="@+id/textView7"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="117dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="16dp"
+        android:text="Kills/Game"
+        android:textAlignment="textEnd"
+        android:textColor="@color/primaryTextColor"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:visibility="visible"
+        app:layout_constraintStart_toStartOf="@+id/textView5"
+        app:layout_constraintTop_toBottomOf="@+id/textView5" />
+
+    <TextView
+        android:id="@+id/textViewKillPorGame"
+        android:layout_width="100dp"
+        android:layout_height="31dp"
+        android:layout_marginStart="8dp"
+        android:text="killsPorGame"
+        android:textColor="@color/primaryTextColor"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:visibility="visible"
+        app:layout_constraintStart_toEndOf="@+id/textView8"
+        app:layout_constraintTop_toTopOf="@+id/textView8" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="117dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="16dp"
+        android:text="win Ratio"
+        android:textAlignment="textEnd"
+        android:textColor="@color/primaryTextColor"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:visibility="visible"
+        app:layout_constraintStart_toStartOf="@+id/textView8"
+        app:layout_constraintTop_toBottomOf="@+id/textView8" />
+
+
+    <TextView
+        android:id="@+id/textViewWinRatio"
+        android:layout_width="100dp"
+        android:layout_height="31dp"
+        android:layout_marginStart="8dp"
+        android:text="winRatio"
+        android:textColor="@color/primaryTextColor"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="@+id/textView6"
+        app:layout_constraintStart_toEndOf="@+id/textView6"
+        app:layout_constraintTop_toTopOf="@+id/textView6" />
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="142dp"
+        android:layout_height="306dp"
+        android:layout_marginTop="4dp"
+        app:layout_constraintEnd_toStartOf="@+id/textViewTop25"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        app:srcCompat="@drawable/octuplcratch" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 
+
 import androidx.fragment.app.Fragment;
 
 import android.util.Log;
@@ -13,6 +14,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -31,7 +33,7 @@ import retrofit2.Response;
  * {@link UserPSNFragment.OnFragmentInteractionListener} interface
  * to handle interaction events.
  */
-public class UserPSNFragment extends Fragment {
+public class UserPSNFragment extends Fragment  {
 
     private OnFragmentInteractionListener mListener;
     private Button btnVerEstadisticas;
@@ -39,7 +41,12 @@ public class UserPSNFragment extends Fragment {
     MiniTrackerClient miniTrackerClient;
     private TextView tvUsuarioPsn;
     public String sUsuarioFortnite ;
-    public String sPlataforma = "PSN";
+    public String sPlataforma = "psn";
+    private RadioButton rbConsolaPSN;
+    private RadioButton rbConsolaPC;
+    private RadioButton rbConsolaXbox1;
+    private RadioGroup rgConsolas;
+
 
     private  View nView ;
 
@@ -56,8 +63,14 @@ public class UserPSNFragment extends Fragment {
 
 
 
-        // Inflate the layout for this fragment
+        // Inflate the layout for this fragment.
         nView = inflater.inflate(R.layout.fragment_user_psn, container, false);
+
+        rgConsolas = nView.findViewById(R.id.radioGroup);
+        rbConsolaPSN = nView.findViewById(R.id.radioButtonPSN);
+        rbConsolaPC  = nView.findViewById(R.id.radioButtonPC);
+        rbConsolaXbox1  = nView.findViewById(R.id.radioButtonXbox);
+
         tvUsuarioPsn = nView.findViewById(R.id.editTextUsuarioPsn);
 
          btnVerEstadisticas = (Button) nView.findViewById(R.id.buttonVerUsuario);
@@ -66,6 +79,7 @@ public class UserPSNFragment extends Fragment {
              public void onClick(final View v) {
 
                  sUsuarioFortnite = tvUsuarioPsn.getText().toString();
+                 radioButtonManager();
 
                  if (sUsuarioFortnite.length() > 0) {
 
@@ -96,9 +110,12 @@ public class UserPSNFragment extends Fragment {
 
                                      startActivity(itEstadisticas);
                                  } else {
-                                     Toast.makeText(getActivity(),"No se encuentra el usuario en Epic", Toast.LENGTH_LONG);
+                                     Toast.makeText(v.getContext(),"No se encuentra el usuario en Epic", Toast.LENGTH_LONG);
+
                                  }
                                  //destruimos el activity
+                             } else {
+                                 Toast.makeText(getActivity(),"No se encuentra el usuario en la plataforma", Toast.LENGTH_LONG);
 
                              }
                          }
@@ -118,6 +135,27 @@ public class UserPSNFragment extends Fragment {
              }
          });
          return nView;
+    }
+
+
+
+    public void radioButtonManager() {
+        // Is the button now checked?
+
+
+
+
+        if ( rbConsolaPSN.isChecked()) {
+            sPlataforma = "psn";
+        }
+        if ( rbConsolaPC.isChecked()) {
+            sPlataforma = "pc";
+        }
+        if ( rbConsolaXbox1.isChecked()) {
+            sPlataforma = "xbl";
+
+        }
+
     }
 
     // TODO: Rename method, update argument and hook method into UI event
@@ -144,27 +182,8 @@ public class UserPSNFragment extends Fragment {
         mListener = null;
     }
 
-    public void onRadioButtonClicked(View view) {
-        // Is the button now checked?
-        boolean checked = ((RadioButton) view).isChecked();
 
-        // Check which radio button was clicked
-        switch(view.getId()) {
-            case R.id.radioButtonPSN:
-                if (checked)
-                    sPlataforma = "psn";
-                    break;
-            case R.id.radioButtonXbox:
-                if (checked)
-                    sPlataforma = "xbl";
-                    break;
-            case R.id.radioButtonPC:
-                if (checked)
-                    sPlataforma = "pc";
-                    break;
 
-        }
-    }
 
     /**
      * This interface must be implemented by activities that contain this

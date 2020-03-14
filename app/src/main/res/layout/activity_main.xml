@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/secondaryLightColor"
     tools:context=".MainActivity">
 
     <ImageView
@@ -15,7 +16,7 @@
         app:layout_constraintHorizontal_bias="0.542"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView4"
-        app:srcCompat="@drawable/c250307eea5e5b88979c5945ca8f07e9" />
+        app:srcCompat="@drawable/ab350b8c35dadc57d2a4e8335ddb670b" />
 
     <ImageView
         android:id="@+id/imageView4"
@@ -29,14 +30,14 @@
     <fragment
         android:id="@+id/fragment2"
         android:name="com.magus.fortniteminitracker.UserPSNFragment"
+        android:layout_width="match_parent"
         android:layout_height="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView3"
-        app:layout_constraintVertical_bias="0.0"
-        android:layout_width="match_parent" />
+        app:layout_constraintVertical_bias="0.0" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

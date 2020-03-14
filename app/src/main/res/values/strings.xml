@@ -5,4 +5,7 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="usuarioPSN">Usuario de PSN</string>
+    <string name="PSN_VALUE">PSN</string>
+    <string name="XBOX_VALUE">Xbox1</string>
+    <string name="PC_VALUE">PC</string>
 </resources>

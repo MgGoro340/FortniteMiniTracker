@@ -11,7 +11,8 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:background="@color/secondaryLightColor">
 
         <EditText
             android:id="@+id/editTextUsuarioPsn"
@@ -31,6 +32,9 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="36dp"
+            android:background="@color/secondaryColor"
+            android:backgroundTint="@color/primaryLightColor"
+            android:backgroundTintMode="screen"
             android:text="@string/verEstsadisticas"
             UserPSNFragment:layout_constraintEnd_toEndOf="@+id/editTextUsuarioPsn"
             UserPSNFragment:layout_constraintHorizontal_bias="1.0"
@@ -51,19 +55,23 @@
                 android:id="@+id/radioButtonPSN"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="PSN" />
+                android:clickable="true"
+
+                android:text="@string/PSN_VALUE" />
 
             <RadioButton
                 android:id="@+id/radioButtonXbox"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Xbox" />
+
+                android:text="@string/XBOX_VALUE" />
 
             <RadioButton
                 android:id="@+id/radioButtonPC"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="PC" />
+
+                android:text="@string/PC_VALUE" />
         </RadioGroup>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
